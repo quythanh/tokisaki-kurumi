@@ -6,7 +6,7 @@ new Vue({
         }
     },
     mounted() {
-        const tab = document.getElementById('profile-label-1');
+        const tab = $("#profile-label-1");
         if (tab) {
             let styles = {
                 left: tab.offsetLeft,
@@ -23,8 +23,8 @@ new Vue({
                 width: 129
             },
             lineTemp: null,
-            img1: document.getElementById("profile-img-1"),
-            img2: document.getElementById("profile-img-2")
+            img1: $("#profile-img-1"),
+            img2: $("#profile-img-2")
         }
     },
     methods: {
@@ -33,13 +33,13 @@ new Vue({
 
             switch (tab.parentElement.id) {
                 case "profile-label-1":
-                    document.getElementById("profile-label-2").className = "nav-item label";
+                    $("#profile-label-2").className = "nav-item label";
                     this.img2.className = "col-md-12 img hidden";
                     this.img1.className = "col-md-12 img";
                     this.currentTab = 0;
                     break;
                 case "profile-label-2":
-                    document.getElementById("profile-label-1").className = "nav-item label";
+                    $("#profile-label-1").className = "nav-item label";
                     this.img1.className = "col-md-12 img hidden";
                     this.img2.className = "col-md-12 img";
                     this.currentTab = 1;

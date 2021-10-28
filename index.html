@@ -310,15 +310,15 @@
             }
         }
 
-        $("#skill-page").className = "row hidden justify-content-center";
+        $("#skill-page").addClass("hidden");
 
         var myVar;
 
         function myFunction() {
             myVar = setTimeout(() => {
                 $("#preload").remove();
-                $("#menu_bar").style = null;
-                $("body").style = null;
+                $("#menu_bar").removeAttr("style");
+                $("body").removeAttr("style");
                 $("body").addClass("bg");
             }, 1750);
         }

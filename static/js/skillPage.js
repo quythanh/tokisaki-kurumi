@@ -6,7 +6,7 @@ new Vue({
         }
     },
     mounted() {
-        const tab = document.getElementById('main-form-label');
+        const tab = $('#main-form-label');
         if (tab) {
             let styles = {
                 left: tab.offsetLeft,
@@ -23,8 +23,8 @@ new Vue({
                 width: 89
             },
             lineTemp: null,
-            main_form_content: document.getElementById("main-form-content"),
-            reverse_form_content: document.getElementById("reverse-form-content")
+            main_form_content: $("#main-form-content"),
+            reverse_form_content: $("#reverse-form-content")
         }
     },
     methods: {
@@ -33,13 +33,13 @@ new Vue({
 
             switch (tab.parentElement.id) {
                 case "main-form-label":
-                    document.getElementById("reverse-form-label").className = "nav-item label";
+                    $("#reverse-form-label").className = "nav-item label";
                     this.reverse_form_content.className = "col-12 hidden";
                     this.main_form_content.className = "col-12";
                     this.currentTab = 0;
                     break;
                 case "reverse-form-label":
-                    document.getElementById("main-form-label").className = "nav-item label";
+                    $("#main-form-label").className = "nav-item label";
                     this.main_form_content.className = "col-12 hidden";
                     this.reverse_form_content.className = "col-12";
                     this.currentTab = 1;
