@@ -22,9 +22,7 @@ new Vue({
                 left: 25,
                 width: 129
             },
-            lineTemp: null,
-            img1: $("#profile-img-1"),
-            img2: $("#profile-img-2")
+            lineTemp: null
         }
     },
     methods: {
@@ -34,14 +32,14 @@ new Vue({
             switch (tab.parentElement.id) {
                 case "profile-label-1":
                     $("#profile-label-2").className = "nav-item label";
-                    this.img2.className = "col-md-12 img hidden";
-                    this.img1.className = "col-md-12 img";
+                    $("#profile-img-2").className = "col-md-12 img hidden";
+                    $("#profile-img-1").className = "col-md-12 img";
                     this.currentTab = 0;
                     break;
                 case "profile-label-2":
                     $("#profile-label-1").className = "nav-item label";
-                    this.img1.className = "col-md-12 img hidden";
-                    this.img2.className = "col-md-12 img";
+                    $("#profile-img-1").className = "col-md-12 img hidden";
+                    $("#profile-img-2").className = "col-md-12 img";
                     this.currentTab = 1;
                     break;
             }
@@ -55,16 +53,18 @@ new Vue({
         onTabMouseEnter(evt) {
             const tab = evt.target
 
-            switch (tab.id) {
-                case "profile-label-1":
-                    this.img2.className = "col-md-12 img hidden";
-                    this.img1.className = "col-md-12 img";
-                    break;
-                case "profile-label-2":
-                    this.img1.className = "col-md-12 img hidden";
-                    this.img2.className = "col-md-12 img";
-                    break;
-            }
+            $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+
+            // switch (tab.id) {
+            //     case "profile-label-1":
+            //         $("#profile-img-2").className = "col-md-12 img hidden";
+            //         $("#profile-img-1").className = "col-md-12 img";
+            //         break;
+            //     case "profile-label-2":
+
+            //         $("#profile-img-2").className = "col-md-12 img";
+            //         break;
+            // }
 
             let styles = {
                 left: tab.offsetLeft,
@@ -75,16 +75,18 @@ new Vue({
         onTabMouseLeave() {
             this.lineTemp = null;
 
-            switch (this.currentTab) {
-                case 0:
-                    this.img2.className = "col-md-12 img hidden";
-                    this.img1.className = "col-md-12 img";
-                    break;
-                case 1:
-                    this.img1.className = "col-md-12 img hidden";
-                    this.img2.className = "col-md-12 img";
-                    break;
-            }
+            $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+
+            // switch (this.currentTab) {
+            //     case 0:
+            //         $("#profile-img-2").className = "col-md-12 img hidden";
+            //         $("#profile-img-1").className = "col-md-12 img";
+            //         break;
+            //     case 1:
+            //         $("#profile-img-1").className = "col-md-12 img hidden";
+            //         $("#profile-img-2").className = "col-md-12 img";
+            //         break;
+            // }
         }
     }
 })
