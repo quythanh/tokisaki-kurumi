@@ -32,14 +32,12 @@ new Vue({
             switch (tab.parentElement.id) {
                 case "profile-label-1":
                     $("#profile-label-2").className = "nav-item label";
-                    $("#profile-img-2").className = "col-md-12 img hidden";
-                    $("#profile-img-1").className = "col-md-12 img";
+                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
                     this.currentTab = 0;
                     break;
                 case "profile-label-2":
                     $("#profile-label-1").className = "nav-item label";
-                    $("#profile-img-1").className = "col-md-12 img hidden";
-                    $("#profile-img-2").className = "col-md-12 img";
+                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
                     this.currentTab = 1;
                     break;
             }
@@ -53,18 +51,12 @@ new Vue({
         onTabMouseEnter(evt) {
             const tab = evt.target
 
-            $("#profile-img-1, #profile-img-2").toggleClass("hidden");
-
-            // switch (tab.id) {
-            //     case "profile-label-1":
-            //         $("#profile-img-2").className = "col-md-12 img hidden";
-            //         $("#profile-img-1").className = "col-md-12 img";
-            //         break;
-            //     case "profile-label-2":
-
-            //         $("#profile-img-2").className = "col-md-12 img";
-            //         break;
-            // }
+            switch (tab.id) {
+                case "profile-label-1":
+                case "profile-label-2":
+                default:
+                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+            }
 
             let styles = {
                 left: tab.offsetLeft,
@@ -75,18 +67,12 @@ new Vue({
         onTabMouseLeave() {
             this.lineTemp = null;
 
-            $("#profile-img-1, #profile-img-2").toggleClass("hidden");
-
-            // switch (this.currentTab) {
-            //     case 0:
-            //         $("#profile-img-2").className = "col-md-12 img hidden";
-            //         $("#profile-img-1").className = "col-md-12 img";
-            //         break;
-            //     case 1:
-            //         $("#profile-img-1").className = "col-md-12 img hidden";
-            //         $("#profile-img-2").className = "col-md-12 img";
-            //         break;
-            // }
+            switch (this.currentTab) {
+                case 0:
+                case 1:
+                default:
+                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+            }
         }
     }
 })
