@@ -32,12 +32,14 @@ new Vue({
             switch (tab.parentElement.id) {
                 case "profile-label-1":
                     $("#profile-label-2").className = "nav-item label";
-                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+                    $("#profile-img-2").attr("class", "col-md-12 img hidden");
+                    $("#profile-img-1").attr("class", "col-md-12 img");
                     this.currentTab = 0;
                     break;
                 case "profile-label-2":
                     $("#profile-label-1").className = "nav-item label";
-                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+                    $("#profile-img-1").attr("class", "col-md-12 img hidden");
+                    $("#profile-img-2").attr("class", "col-md-12 img");
                     this.currentTab = 1;
                     break;
             }
@@ -53,9 +55,11 @@ new Vue({
 
             switch (tab.id) {
                 case "profile-label-1":
+                    $("#profile-img-2").attr("class", "col-md-12 img hidden");
+                    $("#profile-img-1").attr("class", "col-md-12 img");
                 case "profile-label-2":
-                default:
-                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+                    $("#profile-img-1").attr("class", "col-md-12 img hidden");
+                    $("#profile-img-2").attr("class", "col-md-12 img");
             }
 
             let styles = {
@@ -69,9 +73,11 @@ new Vue({
 
             switch (this.currentTab) {
                 case 0:
+                    $("#profile-img-2").attr("class", "col-md-12 img hidden");
+                    $("#profile-img-1").attr("class", "col-md-12 img");
                 case 1:
-                default:
-                    $("#profile-img-1, #profile-img-2").toggleClass("hidden");
+                    $("#profile-img-1").attr("class", "col-md-12 img hidden");
+                    $("#profile-img-2").attr("class", "col-md-12 img");
             }
         }
     }
