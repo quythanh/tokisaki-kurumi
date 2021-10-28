@@ -6,7 +6,7 @@ new Vue({
         }
     },
     mounted() {
-        const tab = $("#profile-label-1");
+        const tab = $("#profile-label-1")[0];
         if (tab) {
             let styles = {
                 left: tab.offsetLeft,

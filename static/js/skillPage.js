@@ -22,9 +22,7 @@ new Vue({
                 left: 0,
                 width: 89
             },
-            lineTemp: null,
-            main_form_content: $("#main-form-content")[0],
-            reverse_form_content: $("#reverse-form-content")[0]
+            lineTemp: null
         }
     },
     methods: {
@@ -33,15 +31,15 @@ new Vue({
 
             switch (tab.parentElement.id) {
                 case "main-form-label":
-                    document.getElementById("reverse-form-label").className = "nav-item label";
-                    this.reverse_form_content.className = "col-12 hidden";
-                    this.main_form_content.className = "col-12";
+                    $("#reverse-form-label").attr("class", "nav-item label");
+                    $("#reverse-form-content").attr("class", "col-12 hidden");
+                    $("#main-form-content").attr("class", "col-12");
                     this.currentTab = 0;
                     break;
                 case "reverse-form-label":
-                    document.getElementById("main-form-label").className = "nav-item label";
-                    this.main_form_content.className = "col-12 hidden";
-                    this.reverse_form_content.className = "col-12";
+                    $("#main-form-label").attr("class", "nav-item label");
+                    $("#main-form-content").attr("class", "col-12 hidden");
+                    $("#reverse-form-content").attr("class", "col-12");
                     this.currentTab = 1;
                     break;
             }
@@ -58,12 +56,12 @@ new Vue({
 
             switch (tab.id) {
                 case "main-form-label":
-                    this.reverse_form_content.className = "col-12 hidden";
-                    this.main_form_content.className = "col-12";
+                    $("#reverse-form-content").attr("class", "col-12 hidden");
+                    $("#main-form-content").attr("class", "col-12");
                     break;
                 case "reverse-form-label":
-                    this.main_form_content.className = "col-12 hidden";
-                    this.reverse_form_content.className = "col-12";
+                    $("#main-form-content").attr("class", "col-12 hidden");
+                    $("#reverse-form-content").attr("class", "col-12");
                     break;
             }
 
@@ -78,12 +76,12 @@ new Vue({
 
             switch (this.currentTab) {
                 case 0:
-                    this.reverse_form_content.className = "col-12 hidden";
-                    this.main_form_content.className = "col-12";
+                    $("#reverse-form-content").attr("class", "col-12 hidden");
+                    $("#main-form-content").attr("class", "col-12");
                     break;
                 case 1:
-                    this.main_form_content.className = "col-12 hidden";
-                    this.reverse_form_content.className = "col-12";
+                    $("#main-form-content").attr("class", "col-12 hidden");
+                    $("#reverse-form-content").attr("class", "col-12");
                     break;
 
             }

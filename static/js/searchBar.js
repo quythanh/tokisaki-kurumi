@@ -2,7 +2,7 @@
 
 txt = $("#searchbar-text");
 
-$("#searchbar").click(event => {
+$("#searchbar").click((event) => {
     switch (event.target.id) {
         case "search-by-voice":
             txt.textContent = "lmao, chả ai xài cái nút này cả";
