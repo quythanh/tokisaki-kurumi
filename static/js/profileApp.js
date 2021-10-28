@@ -57,9 +57,11 @@ new Vue({
                 case "profile-label-1":
                     $("#profile-img-2").attr("class", "col-md-12 img hidden");
                     $("#profile-img-1").attr("class", "col-md-12 img");
+                    break;
                 case "profile-label-2":
                     $("#profile-img-1").attr("class", "col-md-12 img hidden");
                     $("#profile-img-2").attr("class", "col-md-12 img");
+                    break;
             }
 
             let styles = {
@@ -75,9 +77,11 @@ new Vue({
                 case 0:
                     $("#profile-img-2").attr("class", "col-md-12 img hidden");
                     $("#profile-img-1").attr("class", "col-md-12 img");
+                    break;
                 case 1:
                     $("#profile-img-1").attr("class", "col-md-12 img hidden");
                     $("#profile-img-2").attr("class", "col-md-12 img");
+                    break;
             }
         }
     }
