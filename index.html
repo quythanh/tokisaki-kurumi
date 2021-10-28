@@ -307,16 +307,16 @@
             }
         }
 
-        document.getElementById("skill-page").className = "row hidden justify-content-center";
+        $("#skill-page").className = "row hidden justify-content-center";
 
         var myVar;
 
         function myFunction() {
             myVar = setTimeout(() => {
-                document.getElementById("preload").remove();
-                document.getElementById("menu_bar").style = null;
-                document.body.style = null;
-                document.body.className = "bg";
+                $("#preload").remove();
+                $("#menu_bar").style = null;
+                $("body").style = null;
+                $("body").addClass("bg");
             }, 1750);
         }
     </script>

@@ -1,10 +1,10 @@
-mainLabel1 = document.getElementById("general-label");
-mainLabel2 = document.getElementById("google-label");
-mainLabel3 = document.getElementById("skill-label");
+mainLabel1 = $("#general-label");
+mainLabel2 = $("#google-label");
+mainLabel3 = $("#skill-label");
 
-mainPage1 = document.getElementById("general-page");
-mainPage2 = document.getElementById("google-page");
-mainPage3 = document.getElementById("skill-page");
+mainPage1 = $("#general-page");
+mainPage2 = $("#google-page");
+mainPage3 = $("#skill-page");
 
 mainLabel1.addEventListener('click', function() {
     if (mainLabel1.className != "col-4 mainLabel active") {
@@ -27,7 +27,7 @@ mainLabel2.addEventListener('click', function() {
         mainLabel3.className = "col-4 mainLabel";
         mainPage3.className = "row hidden";
 
-        document.getElementById("google-content").className = "col-7 hidden";
+        $("#google-content").className = "col-7 hidden";
 
         mainLabel2.className = "col-4 mainLabel active";
         mainPage2.className = "row justify-content-center";

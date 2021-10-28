@@ -2,15 +2,15 @@
 
 txt = document.getElementById("searchbar-text");
 
-document.getElementById("searchbar").addEventListener("click", event => {
+$("#searchbar").addEventListener("click", event => {
     switch (event.target.id) {
         case "search-by-voice":
             txt.textContent = "lmao, chả ai xài cái nút này cả";
             break;
 
         case "search-button":
-            (document.getElementById("google-content").className == "col-7 hidden") ?
-            document.getElementById("google-content").className = "col-7":
+            ($("#google-content").className == "col-7 hidden") ?
+            $("#google-content").className = "col-7":
                 txt.textContent = "kết quả đã hiện sẵn rồi mà =]";
             break;
 
