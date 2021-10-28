@@ -6,7 +6,7 @@ new Vue({
         }
     },
     mounted() {
-        const tab = $("#main-form-label").get();
+        const tab = $("#main-form-label")[0];
         if (tab) {
             let styles = {
                 left: tab.offsetLeft,
@@ -23,8 +23,8 @@ new Vue({
                 width: 89
             },
             lineTemp: null,
-            main_form_content: $("#main-form-content").get(),
-            reverse_form_content: $("#reverse-form-content").get()
+            main_form_content: $("#main-form-content")[0],
+            reverse_form_content: $("#reverse-form-content")[0]
         }
     },
     methods: {
