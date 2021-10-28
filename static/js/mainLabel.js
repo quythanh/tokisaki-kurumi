@@ -6,7 +6,7 @@ mainPage1 = $("#general-page");
 mainPage2 = $("#google-page");
 mainPage3 = $("#skill-page");
 
-mainLabel1.addEventListener('click', function() {
+mainLabel1.click(() => {
     if (mainLabel1.className != "col-4 mainLabel active") {
 
         mainLabel2.className = "col-4 mainLabel";
@@ -18,8 +18,8 @@ mainLabel1.addEventListener('click', function() {
         mainLabel1.className = "col-4 mainLabel active";
         mainPage1.className = "row";
     }
-}, false);
-mainLabel2.addEventListener('click', function() {
+});
+mainLabel2.click(() => {
     if (mainLabel2.className != "col-4 mainLabel active") {
         mainLabel1.className = "col-4 mainLabel";
         mainPage1.className = "row hidden";
@@ -32,8 +32,8 @@ mainLabel2.addEventListener('click', function() {
         mainLabel2.className = "col-4 mainLabel active";
         mainPage2.className = "row justify-content-center";
     }
-}, false);
-mainLabel3.addEventListener('click', function() {
+});
+mainLabel3.click(() => {
     if (mainLabel3.className != "col-4 mainLabel active") {
         mainLabel1.className = "col-4 mainLabel";
         mainPage1.className = "row hidden";
@@ -44,4 +44,4 @@ mainLabel3.addEventListener('click', function() {
         mainLabel3.className = "col-4 mainLabel active";
         mainPage3.className = "row";
     }
-}, false);
+});

@@ -1,8 +1,8 @@
 // cSpell:words Tokisaki Kurumi
 
-txt = document.getElementById("searchbar-text");
+txt = $("#searchbar-text");
 
-$("#searchbar").addEventListener("click", event => {
+$("#searchbar").click(event => {
     switch (event.target.id) {
         case "search-by-voice":
             txt.textContent = "lmao, chả ai xài cái nút này cả";
