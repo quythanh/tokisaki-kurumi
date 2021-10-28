@@ -31,13 +31,13 @@ new Vue({
 
             switch (tab.parentElement.id) {
                 case "profile-label-1":
-                    $("#profile-label-2").className = "nav-item label";
+                    $("#profile-label-2").attr("class", "nav-item label");
                     $("#profile-img-2").attr("class", "col-md-12 img hidden");
                     $("#profile-img-1").attr("class", "col-md-12 img");
                     this.currentTab = 0;
                     break;
                 case "profile-label-2":
-                    $("#profile-label-1").className = "nav-item label";
+                    $("#profile-label-1").attr("class", "nav-item label");
                     $("#profile-img-1").attr("class", "col-md-12 img hidden");
                     $("#profile-img-2").attr("class", "col-md-12 img");
                     this.currentTab = 1;

@@ -7,41 +7,41 @@ mainPage2 = $("#google-page");
 mainPage3 = $("#skill-page");
 
 mainLabel1.click(() => {
-    if (mainLabel1.className != "col-4 mainLabel active") {
+    if (!mainLabel1.hasClass("active")) {
 
-        mainLabel2.className = "col-4 mainLabel";
-        mainPage2.className = "row hidden justify-content-center";
+        mainLabel2.attr("class", "col-4 mainLabel");
+        mainPage2.attr("class", "row hidden justify-content-center");
 
-        mainLabel3.className = "col-4 mainLabel";
-        mainPage3.className = "row hidden";
+        mainLabel3.attr("class", "col-4 mainLabel");
+        mainPage3.attr("class", "row hidden");
 
-        mainLabel1.className = "col-4 mainLabel active";
-        mainPage1.className = "row";
+        mainLabel1.attr("class", "col-4 mainLabel active");
+        mainPage1.attr("class", "row");
     }
 });
 mainLabel2.click(() => {
-    if (mainLabel2.className != "col-4 mainLabel active") {
-        mainLabel1.className = "col-4 mainLabel";
-        mainPage1.className = "row hidden";
+    if (!mainLabel2.hasClass("active")) {
+        mainLabel1.attr("class", "col-4 mainLabel");
+        mainPage1.attr("class", "row hidden");
 
-        mainLabel3.className = "col-4 mainLabel";
-        mainPage3.className = "row hidden";
+        mainLabel3.attr("class", "col-4 mainLabel");
+        mainPage3.attr("class", "row hidden");
 
-        $("#google-content").className = "col-7 hidden";
+        $("#google-content").attr("class", "col-7 hidden");
 
-        mainLabel2.className = "col-4 mainLabel active";
-        mainPage2.className = "row justify-content-center";
+        mainLabel2.attr("class", "col-4 mainLabel active");
+        mainPage2.attr("class", "row justify-content-center");
     }
 });
 mainLabel3.click(() => {
-    if (mainLabel3.className != "col-4 mainLabel active") {
-        mainLabel1.className = "col-4 mainLabel";
-        mainPage1.className = "row hidden";
+    if (!mainLabel3.hasClass("active")) {
+        mainLabel1.attr("class", "col-4 mainLabel");
+        mainPage1.attr("class", "row hidden");
 
-        mainLabel2.className = "col-4 mainLabel";
-        mainPage2.className = "row hidden justify-content-center";
+        mainLabel2.attr("class", "col-4 mainLabel");
+        mainPage2.attr("class", "row hidden justify-content-center");
 
-        mainLabel3.className = "col-4 mainLabel active";
-        mainPage3.className = "row";
+        mainLabel3.attr("class", "col-4 mainLabel active");
+        mainPage3.attr("class", "row");
     }
 });
