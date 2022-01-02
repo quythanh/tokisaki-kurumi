@@ -47,26 +47,16 @@
 
         <div class="row" style="background-color: #fff; border-radius: 5px;">
             <div class="col-md-8" style="background-color: #e6e6e6;">
-                <div class="row justify-content-center" style="margin-top: 5px;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>
-                                    <div class="row" style="margin: 0 5px 0 5px; text-align: center; font-weight: bolder;">
-                                        <div class="col-4 mainLabel active" id="general-label">
-                                            <a>Tổng quan</a>
-                                        </div>
-                                        <div class="col-4 mainLabel" id="skill-label">
-                                            <a>Kỹ năng</a>
-                                        </div>
-                                        <div class="col-4 mainLabel" id="google-label">
-                                            <a>Google</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </thead>
-                    </table>
+                <div class="row justify-content-center" style="margin: 5px 5px 0 5px; text-align: center; font-weight: bolder;">
+                    <div class="col-4 mainLabel active" id="general-label">
+                        <a>Tổng quan</a>
+                    </div>
+                    <div class="col-4 mainLabel" id="skill-label">
+                        <a>Kỹ năng</a>
+                    </div>
+                    <div class="col-4 mainLabel" id="google-label">
+                        <a>Google</a>
+                    </div>
                 </div>
 
                 <div class="row" id="general-page">
@@ -140,7 +130,7 @@
                 </div>
 
                 <div class="row hidden justify-content-center" id="google-page">
-                    <div class="col-md-7">
+                    <div class="col-md-8">
                         <div id="searchbar" class="google-searchbar">
                             <span id="searchbar-text">Tokisaki Kurumi</span>
                             <div class="buttons">
@@ -155,13 +145,40 @@
 
                     <br>
 
-                    <div class="col-7 hidden" id="google-content">
+                    <div class="col-8 hidden" id="google-content">
                         <div class="google-definition">
-                            <h1>perfection</h1>
-                            <h3>
-                                <span>/pəˈfɛkʃ(ə)n/</span>
-
-                            </h3>
+                            <div class="row" style="margin-bottom: 10px;">
+                                <div class="col-55">
+                                    <button class="buttonLanguage">Tiếng anh</button>
+                                </div>
+                                <div class="col-1 tw-menu-btn-image">
+                                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"></path>
+                                    </svg>
+                                </div>
+                                <div class="col-55">
+                                    <button class="buttonLanguage">Tiếng việt</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-55">
+                                    <h1>perfection</h1>
+                                    <h3>
+                                        <span>/pəˈfɛkʃ(ə)n/</span>
+                                    </h3>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-55" style="padding: 0 0 50px 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h1>sự hoàn hảo</h1>
+                                </div>
+                            </div>
+                            <div class="noun">noun</div>
+                            <div class="definition no-bullet">
+                                the condition, state, or quality of being free or as free as possible from all flaws or defects.
+                                <div class="example">
+                                    "the satiny perfection of <b>Kurumi</b>'s skin"
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -302,13 +319,10 @@
     <script src="./static/js/profileApp.js"></script>
 
     <script type="text/javascript">
-        if (history.scrollRestoration) {
+        if (history.scrollRestoration)
             history.scrollRestoration = 'manual';
-        } else {
-            window.onbeforeunload = () => {
-                window.scrollTo(0, 0);
-            }
-        }
+        else
+            window.onbeforeunload = () => window.scrollTo(0, 0);
 
         $("#skill-page").addClass("hidden");
 

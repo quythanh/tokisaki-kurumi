@@ -19,7 +19,7 @@ $("#google-label").click(() => {
         $("#skill-label").attr("class", "col-4 mainLabel");
         $("#skill-page").attr("class", "row hidden");
 
-        $("#google-content").attr("class", "col-7 hidden");
+        $("#google-content").attr("class", "col-8 hidden");
 
         $("#google-label").attr("class", "col-4 mainLabel active");
         $("#google-page").attr("class", "row justify-content-center");
