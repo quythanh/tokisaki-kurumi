@@ -97,3 +97,7 @@ li.nav-item.label.active {
 #profile-img-1 img, #profile-img-2 img {
     max-width: 300px;
 }
+
+row>div {
+    float: right !important;
+}
