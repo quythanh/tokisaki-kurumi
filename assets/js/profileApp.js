@@ -19,7 +19,7 @@ new Vue({
         return {
             currentTab: 0,
             line: {
-                left: 25,
+                left: 26,
                 width: 129
             },
             lineTemp: null

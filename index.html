@@ -8,19 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Preload -->
-    <link rel="preload" href="./static/images/Zafkiel.png" as="image">
+    <link rel="preload" href="./assets/images/Zafkiel.png" as="image">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/custom.css">
-    <link rel="stylesheet" href="./static/css/profile.css">
-    <link rel="stylesheet" href="./static/css/searchBar.css">
-    <link rel="stylesheet" href="./static/css/loader.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/profile.css">
+    <link rel="stylesheet" href="./assets/css/searchBar.css">
+    <link rel="stylesheet" href="./assets/css/loader.css">
 
     <!-- Meta Tag -->
     <meta name="description" content="Tokisaki Kurumi — vợ của Thành">
-    <meta property="og:image" content="./static/images/kurumi_2.png">
-    <link rel="icon" type="image/jpeg" href="./static/images/favicon.jpg" />
+    <meta property="og:image" content="./assets/images/kurumi_2.png">
+    <link rel="icon" type="image/jpeg" href="./assets/images/favicon.jpg" />
 
     <title>Tokisaki Kurumi — vợ của Thành</title>
 </head>
@@ -36,7 +36,7 @@
 
     <div id="menu_bar" style="display: none;">
         <a href="">
-            <img src="./static/images/logo.png" style="margin-top: 40px; margin-bottom: 15px;">
+            <img src="./assets/images/logo.png" style="margin-top: 40px; margin-bottom: 15px;">
         </a>
     </div>
 
@@ -44,120 +44,115 @@
         <div class="row flex-row-reverse" style="background-color: #fff; border-radius: 5px; margin-top: 120px;">
             
             <!-- Profile Section -->
-            <div class="col-md-4">
-                <div class="row justify-content-center">
-                    <table class="table table-borderless" style="margin-top: 5px; border-radius: 5px; border: 1px dotted #00B831; width: 320px;">
-                        <thead>
-                            <tr>
-                                <td colspan="3" class="thead1">
-                                    Tokisaki Kurumi
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="3" align="center">
-                                    <div class="row">
-                                        <div id="profile-app">
-                                            <div class="position-relative">
-                                                <ul class="nav justify-content-center">
-                                                    <li id="profile-label-1" class="nav-item label active" @click="onTabClick" @mouseenter="onTabMouseEnter" @mouseleave="onTabMouseLeave">
-                                                        <a style="padding: .5rem 1rem; display: block;">Thường Phục</a>
-                                                    </li>
-                                                    <li id="profile-label-2" class="nav-item label" @click="onTabClick" @mouseenter="onTabMouseEnter" @mouseleave="onTabMouseLeave">
-                                                        <a style="padding: .5rem 1rem; display: block;">Tinh Linh</a>
-                                                    </li>
-                                                </ul>
-                                                <div class="line" :style="{ left: `${lineStyles.left}px`, width: `${lineStyles.width}px` }"></div>
-                                            </div>
-                                        </div>
+            <div id="profile-section" class="col-md-4">
+                <table class="table table-borderless" style="margin-top: 5px; border-radius: 5px; border: 1px dotted #00B831; width: 320px;">
+                    <thead>
+                        <tr>
+                            <td colspan="3" class="thead1">
+                                Tokisaki Kurumi
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" align="center">
+                                <div id="profile-app">
+                                    <div class="position-relative">
+                                        <ul class="nav justify-content-center">
+                                            <li id="profile-label-1" class="nav-item label active" @click="onTabClick" @mouseenter="onTabMouseEnter" @mouseleave="onTabMouseLeave">
+                                                <a style="padding: .5rem 1rem; display: block;">Thường Phục</a>
+                                            </li>
+                                            <li id="profile-label-2" class="nav-item label" @click="onTabClick" @mouseenter="onTabMouseEnter" @mouseleave="onTabMouseLeave">
+                                                <a style="padding: .5rem 1rem; display: block;">Tinh Linh</a>
+                                            </li>
+                                        </ul>
+                                        <div class="line" :style="{ left: `${lineStyles.left}px`, width: `${lineStyles.width}px` }"></div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-12 img active" id="profile-img-1">
-                                            <img src="./static/images/Kurumi_Normal.png">
-                                        </div>
-                                        <div class="col-md-12 img hidden" id="profile-img-2">
-                                            <img src="./static/images/Kurumi_Spirit.png">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="thead2">
-                                    Profile
-                                </td>
-                            </tr>
-                            <tr style="border-top: solid #fff 1px">
-                                <th rowspan="2" class="key">Tên</th>
-                                <td class="key" style="border-left: solid #fff 1px">Kanji</td>
-                                <td class="value">時崎 狂三</td>
-                            </tr>
-                            <tr>
-                                <th class="key" style="border-left: solid #fff 1px; border-top: solid #fff 1px;">Romanji</th>
-                                <td class="value">Tokisaki Kurumi</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Sinh nhật</th>
-                                <td class="value">Ngày 10, Tháng 6</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Tuổi</th>
-                                <td class="value">
-                                    Không rõ?!
-                                    <br> 17 - 18 (Bề ngoài)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Giới tính</th>
-                                <td class="value">Nữ</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Chiều cao</th>
-                                <td class="value">157cm</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Chủng tộc</th>
-                                <td class="value">
-                                    Người (Trước kia)
-                                    <br> Tinh Linh (Hiện tại)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Màu tóc</th>
-                                <td class="value">Đen</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Màu mắt</th>
-                                <td class="value">
-                                    Đỏ (Phải)
-                                    <br> Đồng hồ Vàng (Trái)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Biệt Danh</th>
-                                <td class="value">
-                                    Nightmare
-                                    <br> Kurumin
-                                </td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Hạng</th>
-                                <td class="value">Tinh Linh bậc S</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="key">Chồng</th>
-                                <td class="value">
-                                    陳貴成
-                                    <br> Tsàn Quý Thành
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="thead3">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                </div>
+                                
+                                <div class="col-md-12 img active" id="profile-img-1">
+                                    <img src="./assets/images/Kurumi_Normal.png">
+                                </div>
+                                <div class="col-md-12 img hidden" id="profile-img-2">
+                                    <img src="./assets/images/Kurumi_Spirit.png">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="thead2">
+                                Profile
+                            </td>
+                        </tr>
+                        <tr style="border-top: solid #fff 1px">
+                            <th rowspan="2" class="key">Tên</th>
+                            <td class="key" style="border-left: solid #fff 1px">Kanji</td>
+                            <td class="value">時崎 狂三</td>
+                        </tr>
+                        <tr>
+                            <th class="key" style="border-left: solid #fff 1px; border-top: solid #fff 1px;">Romanji</th>
+                            <td class="value">Tokisaki Kurumi</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Sinh nhật</th>
+                            <td class="value">Ngày 10, Tháng 6</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Tuổi</th>
+                            <td class="value">
+                                Không rõ?!
+                                <br> 17 - 18 (Bề ngoài)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Giới tính</th>
+                            <td class="value">Nữ</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Chiều cao</th>
+                            <td class="value">157cm</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Chủng tộc</th>
+                            <td class="value">
+                                Người (Trước kia)
+                                <br> Tinh Linh (Hiện tại)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Màu tóc</th>
+                            <td class="value">Đen</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Màu mắt</th>
+                            <td class="value">
+                                Đỏ (Phải)
+                                <br> Đồng hồ Vàng (Trái)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Biệt Danh</th>
+                            <td class="value">
+                                Nightmare
+                                <br> Kurumin
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Hạng</th>
+                            <td class="value">Tinh Linh bậc S</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="key">Chồng</th>
+                            <td class="value">
+                                陳貴成
+                                <br> Tsàn Quý Thành
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="thead3">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <!-- Main Section -->
@@ -195,7 +190,7 @@
 
                     <div id="main-form-content" class="col-12">
                         <div style="display: block; text-align: -webkit-center;">
-                            <img src="./static/images/main_form.png" style="width: 80%" title="Tokisaki Kurumi">
+                            <img src="./assets/images/main_form.png" style="width: 80%" title="Tokisaki Kurumi">
                             <hr width="90%">
                         </div>
 
@@ -220,7 +215,7 @@
 
                     <div id="reverse-form-content" class="col-12 hidden">
                         <div style="display: block; text-align: -webkit-center;">
-                            <img src="./static/images/reverse_form.png" style="width: 80%" title="Yamauchi Sawa (White Queen)">
+                            <img src="./assets/images/reverse_form.png" style="width: 80%" title="Yamauchi Sawa (White Queen)">
                             <hr width="90%">
                         </div>
 
@@ -250,10 +245,10 @@
                             <span id="searchbar-text">Tokisaki Kurumi</span>
                             <div class="buttons">
                                 <picture style="margin: 0 16px;">
-                                    <source srcset="./static/images/google_mic.webp" type="image/webp">
-                                    <img id="search-by-voice" src="./static/images/google_mic.png">
+                                    <source srcset="./assets/images/google_mic.webp" type="image/webp">
+                                    <img id="search-by-voice" src="./assets/images/google_mic.png">
                                 </picture>
-                                <img id="search-button" src="./static/images/google_search.svg">
+                                <img id="search-button" src="./assets/images/google_search.svg">
                             </div>
                         </div>
                     </div>
@@ -302,19 +297,19 @@
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="../static/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
     <!-- Vue.js -->
-    <script src="../static/js/vue/vue.min.js"></script>
+    <script src="../assets/js/vue/vue.min.js"></script>
 
     <!-- jQuery -->
-    <script src="../static/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery/jquery-3.6.0.min.js"></script>
 
     <!-- My Script -->
-    <script src="./static/js/searchBar.js"></script>
-    <script src="./static/js/mainLabel.js"></script>
-    <script src="./static/js/skillPage.js"></script>
-    <script src="./static/js/profileApp.js"></script>
+    <script src="./assets/js/searchBar.js"></script>
+    <script src="./assets/js/mainLabel.js"></script>
+    <script src="./assets/js/skillPage.js"></script>
+    <script src="./assets/js/profileApp.js"></script>
 
     <script>
         if (history.scrollRestoration)
